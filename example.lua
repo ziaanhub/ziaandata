@@ -1,44 +1,46 @@
-local UIHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/ziaanhub/ziaanlib/refs/heads/main/base/main.lua"))()
+-- Load ZiaanUI melalui loadstring
+local ZiaanUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/yourusername/ZiaanUI/main/ZiaanUI.lua"))()
 
--- Membuat UI Hub baru
-local hub = UIHub.new({
-	Name = "My UI Hub",
-	Theme = "Dark",
-	AccentColor = Color3.fromRGB(0, 255, 170),
-	Size = UDim2.new(0, 550, 0, 450)
+-- Contoh penggunaan
+local hub = ZiaanUI.new({
+    Name = "ZiaanUI Hub",
+    Theme = "Dark",
+    AccentColor = Color3.fromRGB(0, 255, 170),
+    Size = UDim2.new(0, 550, 0, 450)
 })
 
--- Menambahkan tab
+-- Tambahkan tab
 local mainTab = hub:AddTab("Main")
-local settingsTab = hub:AddTab("Settings")
+local playerTab = hub:AddTab("Player")
+local visualTab = hub:AddTab("Visual")
 
--- Menambahkan section ke tab
+-- Tambahkan section
 local combatSection = hub:AddSection(mainTab, "Combat")
 local movementSection = hub:AddSection(mainTab, "Movement")
-local visualSection = hub:AddSection(mainTab, "Visual")
+local playerSection = hub:AddSection(playerTab, "Player Settings")
 
--- Menambahkan elemen ke section
+-- Tambahkan elemen UI
 hub:AddButton(combatSection, "Kill All", function()
-	print("Kill All clicked!")
+    print("Kill All executed!")
 end)
 
 hub:AddToggle(combatSection, "Aimbot", false, function(value)
-	print("Aimbot:", value)
+    print("Aimbot:", value)
 end)
 
 hub:AddSlider(combatSection, "Aimbot FOV", 1, 360, 90, function(value)
-	print("Aimbot FOV:", value)
+    print("Aimbot FOV:", value)
 end)
 
-hub:AddDropdown(combatSection, "Weapon", {"AK-47", "Shotgun", "Sniper"}, "AK-47", function(value)
-	print("Selected weapon:", value)
+hub:AddDropdown(combatSection, "Weapon", {"AK-47", "Shotgun", "Sniper", "Pistol"}, "AK-47", function(value)
+    print("Selected weapon:", value)
 end)
 
 hub:AddKeybind(combatSection, "Toggle Menu", Enum.KeyCode.RightShift, function(key)
-	hub:Toggle()
+    hub:Toggle()
 end)
 
 hub:AddLabel(combatSection, "Combat Settings")
 
--- Tampilkan UI
--- hub:Toggle() -- Bisa dipanggil untuk toggle visibility
+-- Toggle UI dengan keybind
+hub:Show()

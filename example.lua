@@ -1,4 +1,4 @@
-local UIHub = require(path.to.UIHub)
+local UIHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/ziaanhub/ziaanhub/refs/heads/main/source/core/ziaanhub.lua"))()
 
 -- Membuat UI Hub baru
 local hub = UIHub.new({

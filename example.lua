@@ -1,5 +1,5 @@
 -- Load ZiaanUI melalui loadstring
-local ZiaanUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/yourusername/ZiaanUI/main/ZiaanUI.lua"))()
+local ZiaanUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/ziaanhub/ziaanlib/refs/heads/main/base/main.lua"))()
 
 -- Contoh penggunaan
 local hub = ZiaanUI.new({

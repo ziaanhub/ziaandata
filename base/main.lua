@@ -1,5 +1,5 @@
 -- UI Hub Library
--- Author: [Your Name]
+-- Author: Ziaandev
 -- Version: 1.0
 
 local UIHub = {}

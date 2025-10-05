@@ -1,4 +1,4 @@
-local UIHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/ziaanhub/ziaanhub/refs/heads/main/source/core/ziaanhub.lua"))()
+local UIHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/ziaanhub/ziaanlib/refs/heads/main/base/main.lua"))()
 
 -- Membuat UI Hub baru
 local hub = UIHub.new({
